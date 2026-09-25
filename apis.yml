@@ -1,23 +1,63 @@
 aid: andie-swim
+
 name: Andie Swim
-description: 'Andie Swim is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+
+image: https://cdn.shopify.com/s/files/1/0024/2289/8758/files/ANDIE-logo-full-rgb-black.png?height=628&pad_color=fff&v=1619642340&width=1200
+
+description: Andie Swim (operating as Andie Co.) is a modern swimwear and essentials brand offering a wide range of swimwear, activewear, and
+  lifestyle apparel. The company emphasizes inclusive sizing, high-quality materials, and a seamless online shopping experience with global shipping.
+  Their website showcases collections, detailed product information, and a focus on comfort and confidence for all body types.
+
 url: https://raw.githubusercontent.com/api-evangelist/andie-swim/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-24 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-24'
+
 modified: '2026-09-24'
+
 tags:
-- Company
-apis: []
+- Swimwear
+- Fashion
+- E-commerce
+- InclusiveSizing
+- Lifestyle
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: LLMsTxt
+  url: llms/andie-swim-llms.txt
+- type: WellKnown
+  url: well-known/andie-swim-well-known.yml
+- type: Hosts
+  url: hosts/andie-swim-hosts.yml
+- type: Vendors
+  url: vendors/andie-swim-vendors.yml
+- type: DomainSecurity
+  url: security/andie-swim-domain-security.yml
 - type: Website
-  url: https://www.nasdaqprivatemarket.com/
+  url: https://andieswim.com/
+
+apis:
+- name: Andie Swim API
+  description: API for Andie Swim e-commerce platform
+  humanURL: https://andieswim.com
+  aid: andie-swim:andie-swim-api
+x-enrichment:
+  date: '2026-09-24'
+  status: enriched
+  artifacts_added: 9
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
